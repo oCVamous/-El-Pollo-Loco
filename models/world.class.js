@@ -1,6 +1,6 @@
 class World {
 
-    character = new CharacterData();
+    character = new Character();
     enemies = [
         new Chicken(),
         new Chicken(),
