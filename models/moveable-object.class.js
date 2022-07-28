@@ -10,7 +10,7 @@ class MoveableObject {
         this.img.src = path;
     }
     moveRight() {
-
+        console.log('Moving-right');
     }
 
     moveLeft() {
