@@ -9,7 +9,7 @@ class World {
     clouds = [
         new Cloud(),
     ];
-    backgoundObjects = [
+    BackgoundObjects = [
         new BackgroundObject('img/5_background/complete_background.png')
     ];
     canvas;
