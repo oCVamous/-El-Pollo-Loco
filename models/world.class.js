@@ -1,6 +1,6 @@
 class World {
 
-    character = new Character();
+    character = new Character(World);
     enemies = [
         new Chicken(),
         new Chicken(),
@@ -29,7 +29,7 @@ class World {
     }
 
     setWorld() {
-        this.character.world = world;
+        this.character.world = this;
     }
 
     draw() {
