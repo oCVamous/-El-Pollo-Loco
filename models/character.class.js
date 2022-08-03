@@ -38,7 +38,6 @@ class Character extends MoveableObject {
 
         setInterval(() => {
             if(this.world.keyboard.RIGHT || this.world.keyboard.LEFT) {
-                this.x += this.speed;
                 //WALK Animation
                 let i = this.currentImage % this.IMAGES_WALKING.length; //let i = 7 % 6; 1, Rest 1
                 //i = 0, 1, 2, 3, 4, 5, 0, ...
