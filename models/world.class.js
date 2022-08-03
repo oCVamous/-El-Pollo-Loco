@@ -2,10 +2,11 @@ class World {
 
     character = new Character(World);
     level = level1;
-    canvas;
     ctx;
+    canvas;
+    
     keyboard;
-    camera_x = 0;
+    camera_x = -100;
 
     constructor(canvas, keyboard) {
         this.ctx = canvas.getContext('2d');
@@ -30,6 +31,8 @@ class World {
         this.addObjectsToMap(this.level.enemies);
 
         this.ctx.translate(-this.camera_x, 0);
+
+
         
 
         // Draw() wird immer wieder aufgerufen
