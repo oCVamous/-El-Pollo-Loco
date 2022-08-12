@@ -40,7 +40,7 @@ class MoveableObject {
         ctx.beginPath();
         ctx.lineWidth = '5';
         ctx.strokeStyle = 'blue';
-        ctx.rect(this.img, this.x, this.y, this.width, this.height);
+        ctx.rect(this.x, this.y, this.width, this.height);
         //ctx.rect(this.img, this.x, this.y, this.width, this.height);
         ctx.stroke();
     }
