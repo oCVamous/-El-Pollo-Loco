@@ -55,6 +55,14 @@ class World {
             this.flipImage(mo);
         }
         mo.draw(this.ctx);
+
+        this.ctx.beginPath();
+        this.ctx.lineWidth = '5';
+        this.ctx.strokeStyle = 'blue';
+        this.ctx.rect(50, 50, 180, 130);
+        //ctx.rect(this.img, this.x, this.y, this.width, this.height);
+        this.ctx.stroke();
+
         mo.drawFrame(this.ctx);
 
         if (mo.otherDirection) {
