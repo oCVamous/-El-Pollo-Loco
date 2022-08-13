@@ -26,7 +26,7 @@ class World {
             this.level.enemies.forEach((enemy) => {
                 if(this.character.isColliding(enemy)) {
                     console.log('Collison with Character', enemy);
-                    this.character.energy -= 5;
+                    this.character.hit();
                     console.log('Collison with Character, energy', this.character.energy);
                 }
             });
