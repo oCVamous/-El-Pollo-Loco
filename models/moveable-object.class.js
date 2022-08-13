@@ -10,6 +10,7 @@ class MoveableObject {
     otherDirection = false;
     speedY = 0;
     acceleration = 2.5;
+    energy = 100;
 
     applyGravitiy() {
         setInterval(() => {
@@ -49,6 +50,14 @@ class MoveableObject {
 
     }
 
+    //character.isColliding(chicken)
+    isColliding(mo) {
+        return this.x + this.width > mo.x &&
+            this.y + this.height > mo.y &&
+            this.x < mo.x &&
+            this.y < mo.y + mo.height;
+    }
+    
     /**
      * 
      * @param {Array} arr - ['img/image1.png', 'img/image2.png', ... ]
