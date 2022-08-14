@@ -4,9 +4,9 @@ class World {
     level = level1;
     ctx;
     canvas;
-    
     keyboard;
     camera_x = -100;
+    statusBar = new StatusBar();
 
     constructor(canvas, keyboard) {
         this.ctx = canvas.getContext('2d');
@@ -37,6 +37,7 @@ class World {
         this.ctx.translate(this.camera_x, 0);
 
         this.addObjectsToMap(this.level.backgroundObjects);
+        this.addToMap(this.StatusBar);
         this.addToMap(this.character);
         this.addObjectsToMap(this.level.clouds);
         this.addObjectsToMap(this.level.enemies);
@@ -65,10 +66,8 @@ class World {
         if(mo.otherDirection) {
             this.flipImage(mo);
         }
+
         mo.draw(this.ctx);
-
-
-
         mo.drawFrame(this.ctx);
 
         if (mo.otherDirection) {
